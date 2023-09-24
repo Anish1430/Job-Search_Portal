@@ -32,4 +32,9 @@ public class JobController {
       return jobService.getDeleteById(id);
   }
 
+  //Update by Jobs....
+    @PutMapping("jobs/salary/id")
+    public String updateJobsById(@RequestParam Long id, @RequestParam Double salary) {
+        return jobService.updateJobsById(id,salary);
+    }
 }
