@@ -26,6 +26,10 @@ public class JobController {
     public String addJobs(@RequestBody List<Job> newJob){
         return jobService.addJobs(newJob);
     }
-
+  //Delete the Jobs
+  @DeleteMapping("jobs/id/{id}")
+  public String getDeleteById(@PathVariable Long id){
+      return jobService.getDeleteById(id);
+  }
 
 }

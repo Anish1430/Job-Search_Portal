@@ -21,4 +21,9 @@ public class JobService {
     public List<Job> getAllJobs() {
      return (List<Job>) jobRepo.findAll();
     }
+
+    public String getDeleteById(Long id) {
+       jobRepo.deleteById(id);
+       return "remove a Job";
+    }
 }
